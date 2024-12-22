@@ -1,0 +1,7 @@
+# Build output directories
+**/dist/
+**/out/
+**/.next/
+
+# Dependencies
+**/node_modules/
