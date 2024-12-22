@@ -12,19 +12,27 @@
 
 ### Features ✨
 
-- 🏗️ **NX Monorepo Structure** - Organized workspace with apps and libs for maximum code reuse and maintainability
-- ⚡ **Next.js Frontend** - Modern, performant frontend built with Next.js featuring server-side rendering and static generation
-- 🔐 **Express Gateway** - Centralized API gateway that dynamically loads and routes requests to modular API implementations
-- 📦 **Modular APIs** - APIs are developed as independent libraries that inject their routes into the gateway, ensuring clean separation of concerns
-- 🎨 **Modern Styling** - Powered by TailwindCSS for beautiful, responsive, and customizable designs
-- 🧪 **Full Test Suite** - Comprehensive testing with Jest for unit tests and Cypress for E2E testing
-- 📈 **Scalable Architecture** - Built for enterprise-grade applications with clear separation of concerns and best practices
-- 🔄 **Continuous Integration** - GitHub Actions workflow automatically runs the full test suite on main branch updates
-- 📚 **Storybook** - Component development and documentation
+- 🏗️ **NX Monorepo Structure** - Efficient workspace organization for optimal code sharing and maintenance
+- ⚡ **Next.js Frontend** - Server-side rendered React application with static generation capabilities
+- 🔐 **Express Gateway** - Dynamic API gateway for modular request routing and handling
+- 📦 **Modular APIs** - Self-contained API libraries that seamlessly integrate with the gateway
+- 🎨 **Modern Styling** - Responsive and customizable designs using TailwindCSS
+- 🧪 **Full Test Suite** - Jest unit testing and Cypress E2E testing integration
+- 📈 **Scalable Architecture** - Enterprise-ready design with clear separation of concerns
+- 🔄 **Continuous Integration** - Automated testing pipeline using GitHub Actions
+- 📚 **Storybook** - Interactive component development and documentation
 
 ### Getting Started 🚀
 
+<div align="center">
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDEwYmE3ZmRiMmNiNjFhOGJiZjBmZjE0ZjI5ZjM5OGFmZmE1ZjZhZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/KWoRKVkzEkLEMQDDHT/giphy.gif" width="400">
+</div>
+
 1. Clone this repository
+   ```bash
+   git clone https://github.com/yourusername/nx-strap.git
+   cd nx-strap
+   ```
 2. Rename the project:
    - Search and replace all instances of `nx-strap` with your `project_name`
    - Update the project name in `package.json`
@@ -66,8 +74,10 @@ project_name/
 │   ├── api-gateway/     # Express API gateway - Routes requests to appropriate API implementations
 │   └── api-gateway-e2e/ # API gateway end-to-end tests
 ├── libs/
-│   └── data-access/     # API implementation libraries
-│       └── api-example/ # Example API module that injects routes into the gateway
+│   ├── data-access/     # API implementation libraries
+│   │   └── api-example/ # Example API module that injects routes into the gateway
+│   └── ui/             # Shared UI components
+│       └── components/ # React components with Storybook documentation
 ```
 
 ### Architecture Overview 🏛️
