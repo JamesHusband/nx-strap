@@ -14,26 +14,22 @@
 
 ### Getting Started 🚀
 
-#### Local Development
-
-- Run `pnpm install`
-- Rename the `.env.example` file to `.env` and **populate it with your own values**
-- Run `nx serve frontend` to start the Next.js frontend
-- Run `nx serve gateway` to start the Express gateway
-
-#### Production 🌐
-
-- 🌍 Get a domain name
-- 🏗️ Set up your project from this repo on your preferred hosting platform
-- 🔐 Configure your environment variables
-- 🚀 Deploy your apps using NX's powerful build system
+1. Clone this repository
+2. Rename the project:
+   - Search and replace all instances of `nx-strap` with your `project_name`
+   - Update the project name in `package.json`
+   - Update the project name in `nx.json`
+3. Run `pnpm install`
+4. Rename the `.env.example` file to `.env` and **populate it with your own values**
+5. Run `nx serve frontend` to start the Next.js frontend
+6. Run `nx serve gateway` to start the Express gateway
 
 Feel free to contribute or suggest improvements! 🤝
 
 ### Project Structure 📁
 
 ```
-nx-strap/
+project_name/
 ├── apps/
 │   ├── frontend/     # Next.js frontend application
 │   └── gateway/      # Express.js API gateway
