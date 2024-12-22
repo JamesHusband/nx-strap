@@ -5,14 +5,14 @@
 
 import express from 'express';
 import * as path from 'path';
+import { createExampleApiRoutes } from '@nx-strap/data-access';
 
 const app = express();
 
 app.use('/assets', express.static(path.join(__dirname, 'assets')));
 
-app.get('/api/health', (req, res) => {
-  res.send({ message: 'OK' });
-});
+// Mount example API routes under /api prefix
+app.use('/api', createExampleApiRoutes());
 
 const port = process.env.PORT || 3333;
 const server = app.listen(port, () => {
