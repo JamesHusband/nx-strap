@@ -5,7 +5,14 @@ module.exports = [
   ...nx.configs['flat/typescript'],
   ...nx.configs['flat/javascript'],
   {
-    ignores: ['**/dist'],
+    ignores: [
+      '**/node_modules/**/*',
+      '**/dist/**/*',
+      '**/out/**/*',
+      '**/.next/**/*',
+      '**/coverage/**/*',
+      '**/.nx/**/*'
+    ],
   },
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
@@ -34,7 +41,6 @@ module.exports = [
       '**/*.cjs',
       '**/*.mjs',
     ],
-    // Override or add rules here
     rules: {},
   },
 ];

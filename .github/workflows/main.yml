@@ -40,7 +40,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile --legacy-peer-deps
 
       - name: Run Test Suite
-        run: make testsuite 
+        run: make testsuite
