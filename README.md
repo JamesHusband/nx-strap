@@ -12,6 +12,7 @@
 - 🧪 **Full Test Suite** - Comprehensive testing with Jest for unit tests and Cypress for E2E testing.
 - 📈 **Scalable Architecture** - Built for enterprise-grade applications with clear separation of concerns and best practices.
 - 🔄 **Continuous Integration** - GitHub Actions workflow automatically runs the full test suite on main branch updates.
+- 📚 **Storybook** - Component development and documentation.
 
 ### Getting Started 🚀
 
@@ -41,6 +42,8 @@ make build      - Build all applications
 make serve-all  - Serve all applications
 make e2e        - Run end-to-end tests
 make testsuite  - Run all test jobs (test, lint, e2e)
+make storybook  - Start Storybook development server
+make build-storybook - Build Storybook for production
 ```
 
 Feel free to contribute or suggest improvements! 🤝
