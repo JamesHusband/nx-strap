@@ -1,23 +1,17 @@
-import { createExampleApiRoutes } from './api-example';
+import { createUsersRoutes } from './users.routes';
 import * as express from 'express';
 import * as request from 'supertest';
 
-describe('apiExample', () => {
+describe('usersRoutes', () => {
   let app: express.Express;
 
   beforeEach(() => {
     app = express();
-    app.use('/api', createExampleApiRoutes());
-  });
-
-  it('should return OK for health check', async () => {
-    const response = await request(app).get('/api/health');
-    expect(response.status).toBe(200);
-    expect(response.body).toEqual({ message: 'OK' });
+    app.use('/users', createUsersRoutes());
   });
 
   it('should return list of users', async () => {
-    const response = await request(app).get('/api/users');
+    const response = await request(app).get('/users');
     expect(response.status).toBe(200);
     expect(response.body).toHaveLength(3);
     expect(response.body[0]).toHaveProperty('name');
