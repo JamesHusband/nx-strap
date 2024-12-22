@@ -24,10 +24,6 @@
 
 ### Getting Started 🚀
 
-<div align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDEwYmE3ZmRiMmNiNjFhOGJiZjBmZjE0ZjI5ZjM5OGFmZmE1ZjZhZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/KWoRKVkzEkLEMQDDHT/giphy.gif" width="400">
-</div>
-
 1. Clone this repository
    ```bash
    git clone https://github.com/yourusername/nx-strap.git
