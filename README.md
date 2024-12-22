@@ -65,16 +65,46 @@ Feel free to contribute or suggest improvements! 🤝
 ```
 project_name/
 ├── apps/
-│   ├── frontend/        # Next.js frontend application
+│   ├── frontend/        # @nx-strap/source - Next.js frontend application
 │   ├── frontend-e2e/    # Frontend end-to-end tests
-│   ├── api-gateway/     # Express API gateway - Routes requests to appropriate API implementations
+│   ├── api-gateway/     # ApiGateway - Routes requests to appropriate API implementations
 │   └── api-gateway-e2e/ # API gateway end-to-end tests
 ├── libs/
-│   ├── data-access/     # API implementation libraries
+│   ├── data-access/     # @nx-strap/data-access - API implementation libraries
 │   │   └── api-example/ # Example API module that injects routes into the gateway
-│   └── ui/             # Shared UI components
+│   └── ui/             # @nx-strap/ui - Shared UI components
 │       └── components/ # React components with Storybook documentation
 ```
+
+### Import Rules 📦
+
+1. **Frontend App** (`apps/frontend/`):
+
+   ```typescript
+   import { ComponentName } from '@frontend/ui';
+   import { routeName } from '@frontend/data-access';
+   ```
+
+2. **API Gateway** (`apps/api-gateway/`):
+
+   ```typescript
+   import { routeName } from '@frontend/data-access';
+   ```
+
+3. **UI Library** (`libs/ui/components/`):
+
+   ```typescript
+   // Internal imports
+   import { Component } from './lib/component-name';
+   // Export path: @frontend/ui
+   ```
+
+4. **Data Access Library** (`libs/data-access/api-example/`):
+   ```typescript
+   // Internal imports
+   import { route } from './lib/route-name';
+   // Export path: @frontend/data-access
+   ```
 
 ### Architecture Overview 🏛️
 
