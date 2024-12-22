@@ -11,6 +11,7 @@
 - 🎨 **Modern Styling** - Powered by TailwindCSS for beautiful, responsive, and customizable designs.
 - 🧪 **Full Test Suite** - Comprehensive testing with Jest for unit tests and Cypress for E2E testing.
 - 📈 **Scalable Architecture** - Built for enterprise-grade applications with clear separation of concerns and best practices.
+- 🔄 **Continuous Integration** - GitHub Actions workflow automatically runs the full test suite on main branch updates.
 
 ### Getting Started 🚀
 
@@ -19,10 +20,28 @@
    - Search and replace all instances of `nx-strap` with your `project_name`
    - Update the project name in `package.json`
    - Update the project name in `nx.json`
-3. Run `pnpm install`
+3. Run `make install` to install all dependencies
 4. Rename the `.env.example` file to `.env` and **populate it with your own values**
-5. Run `nx serve frontend` to start the Next.js frontend
-6. Run `nx serve api-gateway` to start the Express API gateway
+5. Run `make dev` to start both the frontend and API gateway in parallel
+
+For a list of all available development commands, run `make help`.
+
+### Development Commands 🛠️
+
+The project includes a Makefile for common development tasks. Running `make help` shows all available commands:
+
+```bash
+NX Strap Development Commands:
+make install    - Install all dependencies
+make clean      - Clean build artifacts and dependencies
+make dev        - Start development servers
+make test       - Run all tests
+make lint       - Run linting
+make build      - Build all applications
+make serve-all  - Serve all applications
+make e2e        - Run end-to-end tests
+make testsuite  - Run all test jobs (test, lint, e2e)
+```
 
 Feel free to contribute or suggest improvements! 🤝
 
