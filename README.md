@@ -1,4 +1,4 @@
-<img src=".github/frontend.png" alt="NX Strap - A NX Monorepo Boilerplate" width="100%" />
+<img src=".github/nx-strap.png" alt="NX Strap - A NX Monorepo Boilerplate" width="100%" />
 
 # NX Strap - A Modern NX Monorepo Boilerplate
 
