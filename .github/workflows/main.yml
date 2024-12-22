@@ -40,7 +40,16 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install Dependencies
-        run: pnpm install --no-frozen-lockfile --legacy-peer-deps
+        run: |
+          pnpm install --no-frozen-lockfile --legacy-peer-deps
+          pnpm add -g nx
+
+      - name: Reset NX Cache
+        run: pnpm exec nx reset
 
       - name: Run Test Suite
-        run: make testsuite
+        env:
+          PNPM_HOME: /usr/local/bin
+        run: |
+          export PATH="$PNPM_HOME:$PATH"
+          make testsuite
