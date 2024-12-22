@@ -1,1 +1,1 @@
-export * from './lib/Welcome/Welcome';
+export * from './lib/welcome/welcome';
