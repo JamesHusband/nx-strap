@@ -1,4 +1,4 @@
-<img src=".github/nx-strap.png" alt="NX Strap - A NX Monorepo Boilerplate" width="100%" />
+<img src=".github/frontend.png" alt="NX Strap - A NX Monorepo Boilerplate" width="100%" />
 
 # NX Strap - A Modern NX Monorepo Boilerplate
 
@@ -16,7 +16,7 @@
 
 1. Clone this repository
 2. Rename the project:
-   - Search and replace all instances of `nx-strap` with your `project_name`
+   - Search and replace all instances of `frontend` with your `project_name`
    - Update the project name in `package.json`
    - Update the project name in `nx.json`
 3. Run `pnpm install`
