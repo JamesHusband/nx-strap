@@ -1,18 +1,26 @@
 <img src=".github/nx-strap.png" alt="NX Strap - A NX Monorepo Boilerplate" width="100%" />
 
+[![NX](https://img.shields.io/badge/NX-143055?style=for-the-badge&logo=nx&logoColor=white)](https://nx.dev)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org)
+[![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+[![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://storybook.js.org)
+[![pnpm](https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white)](https://pnpm.io)
+
 # NX Strap - A Modern NX Monorepo Boilerplate
 
 ### Features ✨
 
-- 🏗️ **NX Monorepo Structure** - Organized workspace with apps and libs for maximum code reuse and maintainability.
-- ⚡ **Next.js Frontend** - Modern, performant frontend built with Next.js featuring server-side rendering and static generation.
-- 🔐 **Express Gateway** - Centralized API gateway that dynamically loads and routes requests to modular API implementations.
-- 📦 **Modular APIs** - APIs are developed as independent libraries that inject their routes into the gateway, ensuring clean separation of concerns.
-- 🎨 **Modern Styling** - Powered by TailwindCSS for beautiful, responsive, and customizable designs.
-- 🧪 **Full Test Suite** - Comprehensive testing with Jest for unit tests and Cypress for E2E testing.
-- 📈 **Scalable Architecture** - Built for enterprise-grade applications with clear separation of concerns and best practices.
-- 🔄 **Continuous Integration** - GitHub Actions workflow automatically runs the full test suite on main branch updates.
-- 📚 **Storybook** - Component development and documentation.
+- 🏗️ **NX Monorepo Structure** - Organized workspace with apps and libs for maximum code reuse and maintainability
+- ⚡ **Next.js Frontend** - Modern, performant frontend built with Next.js featuring server-side rendering and static generation
+- 🔐 **Express Gateway** - Centralized API gateway that dynamically loads and routes requests to modular API implementations
+- 📦 **Modular APIs** - APIs are developed as independent libraries that inject their routes into the gateway, ensuring clean separation of concerns
+- 🎨 **Modern Styling** - Powered by TailwindCSS for beautiful, responsive, and customizable designs
+- 🧪 **Full Test Suite** - Comprehensive testing with Jest for unit tests and Cypress for E2E testing
+- 📈 **Scalable Architecture** - Built for enterprise-grade applications with clear separation of concerns and best practices
+- 🔄 **Continuous Integration** - GitHub Actions workflow automatically runs the full test suite on main branch updates
+- 📚 **Storybook** - Component development and documentation
 
 ### Getting Started 🚀
 
