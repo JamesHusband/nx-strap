@@ -15,9 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@frontend/ui": ["libs/ui/components/src/index.ts"],
-      "@frontend/ui/server": ["libs/ui/components/src/server.ts"],
-      "@frontend/data-access": ["libs/data-access/api-example/src/index.ts"]
+      "@nxstrap/ui": ["libs/ui/components/src/index.ts"],
+      "@nxstrap/ui/server": ["libs/ui/components/src/server.ts"],
+      "@nxstrap/data-access": ["libs/data-access/api-example/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,7 +1,7 @@
 import './global.css';
 
 export const metadata = {
-  title: 'frontend',
+  title: 'NxStrap',
   description: 'A NX Monorepo Boilerplate',
 };
 

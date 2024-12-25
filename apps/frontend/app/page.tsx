@@ -1,4 +1,4 @@
-import { Welcome } from '@frontend/ui';
+import { Welcome } from '@nxstrap/ui';
 
 export default function Index() {
   return (

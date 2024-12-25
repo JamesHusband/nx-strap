@@ -30,9 +30,10 @@
    cd nx-strap
    ```
 2. Rename the project:
-   - Search and replace all instances of `nx-strap` with your `project_name`
+   - Search and replace all instances of `@nxstrap` with your desired namespace
    - Update the project name in `package.json`
    - Update the project name in `nx.json`
+   - Update the project name in `tsconfig.base.json`
 3. Run `make install` to install all dependencies
 4. Rename the `.env.example` file to `.env` and **populate it with your own values**
 5. Run `make dev` to start both the frontend and API gateway in parallel
@@ -65,15 +66,15 @@ Feel free to contribute or suggest improvements! 🤝
 ```
 project_name/
 ├── apps/
-│   ├── frontend/        # @nx-strap/source - Next.js frontend application
+│   ├── frontend/        # @nxstrap/source - Next.js frontend application
 │   ├── frontend-e2e/    # Frontend end-to-end tests
 │   ├── api-gateway/     # ApiGateway - Routes requests to appropriate API implementations
 │   └── api-gateway-e2e/ # API gateway end-to-end tests
 ├── libs/
-│   ├── data-access/     # @nx-strap/data-access - API implementation libraries
+│   ├── data-access/     # @nxstrap/data-access - API implementation libraries
 │   │   └── api-example/ # Example API module that injects routes into the gateway
-│   └── ui/             # @nx-strap/ui - Shared UI components
-│       └── components/ # React components with Storybook documentation
+│   └── ui/             # @nxstrap/ui - Shared UI components
+│       └── components/ # UI-Shared - React components with Storybook documentation
 ```
 
 ### Import Rules 📦
@@ -81,14 +82,14 @@ project_name/
 1. **Frontend App** (`apps/frontend/`):
 
    ```typescript
-   import { ComponentName } from '@frontend/ui';
-   import { routeName } from '@frontend/data-access';
+   import { ComponentName } from '@nxstrap/ui';
+   import { routeName } from '@nxstrap/data-access';
    ```
 
 2. **API Gateway** (`apps/api-gateway/`):
 
    ```typescript
-   import { routeName } from '@frontend/data-access';
+   import { routeName } from '@nxstrap/data-access';
    ```
 
 3. **UI Library** (`libs/ui/components/`):
@@ -96,15 +97,30 @@ project_name/
    ```typescript
    // Internal imports
    import { Component } from './lib/component-name';
-   // Export path: @frontend/ui
+   // Export path: @nxstrap/ui
    ```
 
 4. **Data Access Library** (`libs/data-access/api-example/`):
    ```typescript
    // Internal imports
    import { route } from './lib/route-name';
-   // Export path: @frontend/data-access
+   // Export path: @nxstrap/data-access
    ```
+
+### Project Names
+
+- Frontend App: `@nxstrap/source`
+- API Gateway: `ApiGateway`
+- UI Library: `UI-Shared`
+- Data Access: `data-access`
+
+### Global Namespace
+
+All shared code uses the `@nxstrap` namespace:
+
+- `@nxstrap/ui`
+- `@nxstrap/ui/server`
+- `@nxstrap/data-access`
 
 ### Architecture Overview 🏛️
 
