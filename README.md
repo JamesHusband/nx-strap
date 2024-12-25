@@ -1,3 +1,5 @@
+# NX Strap - A Modern NX Monorepo Boilerplate
+
 <img src=".github/readme.webp" alt="NX Strap - A NX Monorepo Boilerplate" width="100%" />
 
 [![NX](https://img.shields.io/badge/NX-143055?style=for-the-badge&logo=nx&logoColor=white)](https://nx.dev)
@@ -8,7 +10,9 @@
 [![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)](https://storybook.js.org)
 [![pnpm](https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white)](https://pnpm.io)
 
-# NX Strap - A Modern NX Monorepo Boilerplate
+### Overview 🎯
+
+NX Strap is a modern monorepo boilerplate that provides a robust foundation for building scalable applications. It combines the power of NX for monorepo management with Next.js for the frontend and Express.js for the backend.
 
 ### Features ✨
 
@@ -22,44 +26,18 @@
 - 🔄 **Continuous Integration** - Automated testing pipeline using GitHub Actions
 - 📚 **Storybook** - Interactive component development and documentation
 
-### Getting Started 🚀
+### Architecture Overview 🏛️
 
-1. Clone this repository
-   ```bash
-   git clone https://github.com/yourusername/nx-strap.git
-   cd nx-strap
-   ```
-2. Rename the project:
-   - Search and replace all instances of `@nxstrap` with your desired namespace
-   - Update the project name in `package.json`
-   - Update the project name in `nx.json`
-   - Update the project name in `tsconfig.base.json`
-3. Run `make install` to install all dependencies
-4. Rename the `.env.example` file to `.env` and **populate it with your own values**
-5. Run `make dev` to start both the frontend and API gateway in parallel
+The project follows a modular API architecture where:
 
-For a list of all available development commands, run `make help`.
-
-### Development Commands 🛠️
-
-The project includes a Makefile for common development tasks. Running `make help` shows all available commands:
-
-```bash
-NX Strap Development Commands:
-make install    - Install all dependencies
-make clean      - Clean build artifacts and dependencies
-make dev        - Start development servers
-make test       - Run all tests
-make lint       - Run linting
-make build      - Build all applications
-make serve-all  - Serve all applications
-make e2e        - Run end-to-end tests
-make testsuite  - Run all test jobs (test, lint, e2e)
-make storybook  - Start Storybook development server
-make build-storybook - Build Storybook for production
-```
-
-Feel free to contribute or suggest improvements! 🤝
+- The `api-gateway` acts as a central routing layer, handling incoming HTTP requests
+- API implementations live in the `data-access` directory as separate libraries
+- Each API module injects its routes into the gateway at runtime
+- This separation allows for:
+  - Independent development and testing of API modules
+  - Clear boundaries between different API domains
+  - Easy addition of new API functionality without modifying the gateway
+  - Better code organization and maintainability
 
 ### Project Structure 📁
 
@@ -77,7 +55,24 @@ project_name/
 │       └── components/ # UI-Shared - React components with Storybook documentation
 ```
 
-### Import Rules 📦
+### Project Names & Namespaces 📦
+
+#### Project Names
+
+- Frontend App: `@nxstrap/source`
+- API Gateway: `ApiGateway`
+- UI Library: `UI-Shared`
+- Data Access: `data-access`
+
+#### Global Namespace
+
+All shared code uses the `@nxstrap` namespace:
+
+- `@nxstrap/ui`
+- `@nxstrap/ui/server`
+- `@nxstrap/data-access`
+
+#### Import Rules
 
 1. **Frontend App** (`apps/frontend/`):
 
@@ -107,34 +102,43 @@ project_name/
    // Export path: @nxstrap/data-access
    ```
 
-### Project Names
+### Getting Started 🚀
 
-- Frontend App: `@nxstrap/source`
-- API Gateway: `ApiGateway`
-- UI Library: `UI-Shared`
-- Data Access: `data-access`
+1. Clone this repository
+   ```bash
+   git clone https://github.com/yourusername/nx-strap.git
+   cd nx-strap
+   ```
+2. Rename the project:
+   - Search and replace all instances of `@nxstrap` with your desired namespace
+   - Update the project name in `package.json`
+   - Update the project name in `nx.json`
+   - Update the project name in `tsconfig.base.json`
+3. Run `make install` to install all dependencies
+4. Rename the `.env.example` file to `.env` and **populate it with your own values**
+5. Run `make dev` to start both the frontend and API gateway in parallel
 
-### Global Namespace
+### Development Commands 🛠️
 
-All shared code uses the `@nxstrap` namespace:
+The project includes a Makefile for common development tasks. Running `make help` shows all available commands:
 
-- `@nxstrap/ui`
-- `@nxstrap/ui/server`
-- `@nxstrap/data-access`
-
-### Architecture Overview 🏛️
-
-The project follows a modular API architecture where:
-
-- The `api-gateway` acts as a central routing layer, handling incoming HTTP requests
-- API implementations live in the `data-access` directory as separate libraries
-- Each API module injects its routes into the gateway at runtime
-- This separation allows for:
-  - Independent development and testing of API modules
-  - Clear boundaries between different API domains
-  - Easy addition of new API functionality without modifying the gateway
-  - Better code organization and maintainability
+```bash
+NX Strap Development Commands:
+make install    - Install all dependencies
+make clean      - Clean build artifacts and dependencies
+make dev        - Start development servers
+make test       - Run all tests
+make lint       - Run linting
+make build      - Build all applications
+make serve-all  - Serve all applications
+make e2e        - Run end-to-end tests
+make testsuite  - Run all test jobs (test, lint, e2e)
+make storybook  - Start Storybook development server
+make build-storybook - Build Storybook for production
+```
 
 ### Credits 🙏
 
 This project aims to provide a robust starting point for building scalable applications using NX monorepo architecture. Special thanks to the NX, Next.js, and Express.js communities for their excellent tools and documentation.
+
+Feel free to contribute or suggest improvements! 🤝
